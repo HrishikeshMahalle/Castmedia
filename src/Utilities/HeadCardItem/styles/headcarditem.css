@@ -1,0 +1,41 @@
+.head-card-item{
+    height: 80%;
+    min-width: 15rem;
+    margin: 0.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 3rem;
+    position: relative;
+  }
+  .head-card-item.active .react-player{
+    border: 5px solid #CD3D0F;
+  }
+  .head-card-item .react-player{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    filter: brightness(1);
+    z-index: 0;
+    transition: 0.3s;
+  }
+  .head-card-item:hover .react-player{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+    filter: brightness(0.3);
+    z-index: 0;
+  }
+  
+  .head-card-item:hover span{
+    position: absolute;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    z-index: 1;
+  }
