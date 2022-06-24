@@ -65,8 +65,8 @@ export default function Main() {
           {videos.map((videos) =>
             videos.subCategory.includes("trending") ? (
               <HeadCardItem
-                key={videos._id}
-                _id={videos._id}
+                key={videos.id}
+                _id={videos.id}
                 title={videos.title}
                 channel={videos.creator}
               />

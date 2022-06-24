@@ -3,6 +3,8 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { useAuth } from "./auth";
 import Header from "../Utilities/Header/header";
 import Sidebar from "../Utilities/Sidebar/sidebar";
+import { getAuthData } from "../Utilities/AuthUtil/authUtil";
+import axios from "axios";
 
 export const Login = () => {
   const [user, setUser] = useState({});
@@ -16,9 +18,10 @@ export const Login = () => {
 
   const handleLogin = () => {
     auth.login(user);
-    navigate(redirectPath, { replace: true });
+    auth.signupHandler();
+    fetchFooDetails();
+    // navigate(redirectPath, { replace: true });
   };
-
 
   const handleChange = (e) => {
     const name = e.target.name;
@@ -26,15 +29,35 @@ export const Login = () => {
     setUser((user) => ({ ...user, [name]: value }));
   };
 
-  const obj = []
+  const encodedToken = getAuthData();
+  console.log("Encoded Tocken", encodedToken);
+  const [foo, setFoo] = useState([]);
+  const fetchFooDetails = async () => {
+    console.log("Fuck it");
+    try {
+      const response = await axios
+        .get(`/api/user/private-route`, {
+          headers: {
+            authorization: encodedToken, // passing token as an authorization header
+          },
+        })
+        .then((response) => console.log(response));
+      setFoo(response.data);
+    } catch (error) {
+      console.log("fetchFoo", error);
+    }
+  };
+
+  const obj = [];
+  console.log("im foo", foo);
 
   const handleForm = (e) => {
     e.preventDefault();
     console.log(user);
-    setUsers(users => [...users,{user}])
-    obj.push(user)
-    console.log(users)
-    console.log(obj)
+    setUsers((users) => [...users, { user }]);
+    obj.push(user);
+    console.log(users);
+    console.log(obj);
     localStorage.setItem("user", JSON.stringify(obj));
   };
   return (

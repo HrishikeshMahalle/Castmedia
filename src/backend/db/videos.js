@@ -5,7 +5,7 @@
 
 export const videos = [
   {
-    _id: "sMlER3GMR7c",
+    id: "sMlER3GMR7c",
     title: "Riptide",
     createdAt: "9 Dec 2017",
     views: "14,139,602",
@@ -18,7 +18,7 @@ export const videos = [
     subCategory: ["trending"],
   },
   {
-    _id: "KI-oUttlCbM",
+    id: "KI-oUttlCbM",
     title: "Ipad - Official Lyrics Video",
     createdAt: "9 Dec 2017",
     views: "14,139,602",
@@ -31,7 +31,7 @@ export const videos = [
     subCategory: ["newMusic"],
   },
   {
-    _id: "KIt3XtQPfAA",
+    id: "KIt3XtQPfAA",
     title: "Meet me At our Spot",
     createdAt: "9 Dec 2017",
     views: "14,139,602",
@@ -44,7 +44,7 @@ export const videos = [
     subCategory: ["newMusic"],
   },
   {
-    _id: "7mWQ38SpEf8",
+    id: "7mWQ38SpEf8",
     title: "All We Know",
     createdAt: "9 Dec 2017",
     views: "14,139,602",
@@ -57,7 +57,7 @@ export const videos = [
     subCategory: ["newMusic"],
   },
   {
-    _id: "RlaBTqv8tQs",
+    id: "RlaBTqv8tQs",
     title: "All We Know",
     createdAt: "9 Dec 2017",
     views: "14,139,602",
@@ -70,7 +70,7 @@ export const videos = [
     subCategory: ["newMusic"],
   },
   {
-    _id: "0b16mI9wprU",
+    id: "0b16mI9wprU",
     title:
       "Prime Time With Ravish Kumar: नैतिक बल के बिना Global Leader का बाहुबल",
     createdAt: "9 Dec 2017",
@@ -84,7 +84,7 @@ export const videos = [
     subCategory: ["trending"],
   },
   {
-    _id: "gihR_OTJ8DU",
+    id: "gihR_OTJ8DU",
     title:
       "Prime Time With Ravish Kumar: 14 States Face Power Shortage Amid Scorching Summer",
     createdAt: "9 Dec 2017",
@@ -98,7 +98,7 @@ export const videos = [
     subCategory: ["news"],
   },
   {
-    _id: "fDfI8wpRYzI",
+    id: "fDfI8wpRYzI",
     title:
       "Prime Time With Ravish Kumar: Fuel Prices: PM Modi Takes Aim At Opposition-Ruled States",
     createdAt: "9 Dec 2017",
@@ -112,7 +112,7 @@ export const videos = [
     subCategory: ["trending"],
   },
   {
-    _id: "roMsxpdw4xE",
+    id: "roMsxpdw4xE",
     title:
       "Bulldozer ka religion & news anchors ki khushi | TV Newsance Ep 168",
     createdAt: "9 Dec 2017",
@@ -126,7 +126,7 @@ export const videos = [
     subCategory: ["news"],
   },
   {
-    _id: "UL7fy1zb9qU",
+    id: "UL7fy1zb9qU",
     title: "Kashmir Files propaganda and the sham of BARC ratings",
     createdAt: "9 Dec 2017",
     views: "14,139,602",
@@ -139,7 +139,7 @@ export const videos = [
     subCategory: ["news"],
   },
   {
-    _id: "DXv0bKZ1EXo",
+    id: "DXv0bKZ1EXo",
     title:
       "G2 Esports vs. FURIA | Upper Semifinals - Day 4 | RLCS Winter Major",
     createdAt: "9 Dec 2017",
@@ -153,7 +153,7 @@ export const videos = [
     subCategory: ["trending"],
   },
   {
-    _id: "RS5pIBOZwmU",
+    id: "RS5pIBOZwmU",
     title:
       "Team Queso vs. FURIA | Lower Quarterfinals - Day 4 | RLCS Winter Major",
     createdAt: "9 Dec 2017",
@@ -167,7 +167,7 @@ export const videos = [
     subCategory: ["games"],
   },
   {
-    _id: "oEDhYdh77AM",
+    id: "oEDhYdh77AM",
     title: "NRG vs. Endpoint | Group Stage - Day 2 | RLCS Winter Major",
     createdAt: "9 Dec 2017",
     views: "14,139,602",
@@ -180,7 +180,7 @@ export const videos = [
     subCategory: ["games"],
   },
   {
-    _id: "zjOCiUoMCls",
+    id: "zjOCiUoMCls",
     title: "😲Is That A Spidercar?",
     createdAt: "9 Dec 2017",
     views: "14,139,602",
@@ -193,7 +193,7 @@ export const videos = [
     subCategory: ["games"],
   },
   {
-    _id: "kF_scF9FXiA",
+    id: "kF_scF9FXiA",
     title: "🔥Highlights - PMPL South Asia Finals Day 1",
     createdAt: "9 Dec 2017",
     views: "14,139,602",
@@ -206,7 +206,7 @@ export const videos = [
     subCategory: ["trending"],
   },
   {
-    _id: "Npu7jkJk5nM",
+    id: "Npu7jkJk5nM",
     title: "Our data is GONE... Again - Petabyte Project Recovery Part 1",
     createdAt: "9 Dec 2017",
     views: "14,139,602",
@@ -219,7 +219,7 @@ export const videos = [
     subCategory: ["Tech"],
   },
   {
-    _id: "aHnd6PAd4C0",
+    id: "aHnd6PAd4C0",
     title: "We Bought 6 Dead GPUs. Can We Fix Them?",
     createdAt: "9 Dec 2017",
     views: "14,139,602",
@@ -232,7 +232,7 @@ export const videos = [
     subCategory: ["trending", "latest"],
   },
   {
-    _id: "ELsYC-N7hgc",
+    id: "ELsYC-N7hgc",
     title: "I Can’t Believe I Liked This…",
     createdAt: "9 Dec 2017",
     views: "14,139,602",
@@ -245,7 +245,7 @@ export const videos = [
     subCategory: ["Tech"],
   },
   {
-    _id: "pFYGZmdXF6s",
+    id: "pFYGZmdXF6s",
     title: "Apple removed the notch!?",
     createdAt: "9 Dec 2017",
     views: "14,139,602",
@@ -258,7 +258,7 @@ export const videos = [
     subCategory: ["Tech"],
   },
   {
-    _id: "YpZqzM_fDqI&t",
+    id: "YpZqzM_fDqI&t",
     title: "The Prices... They're Back...",
     createdAt: "9 Dec 2017",
     views: "14,139,602",

@@ -11,8 +11,10 @@ import ReactPlayer from "react-player";
 import "./styles/explore.css";
 import { GlobalContext } from "../../Context/GlobalState";
 import { PlayModal } from "../../Utilities/PlayModal/playModal";
+import { useAuth } from "../../Context/authcontext";
 
 export default function Explore() {
+  const { isUser } = useAuth();
   const {
     addToHistoryList,
     // historyList,
@@ -23,12 +25,13 @@ export default function Explore() {
     setPlayModalOpen,
     playModalOpen,
     removeFromLikes,
+    addToWatchLater,
   } = useContext(GlobalContext);
   const { id } = useParams();
   const [item, setItem] = useState({});
   const [filterItem, setFilterItem] = useState([]);
 
-  const vid = videos && videos.find((product) => product._id === id);
+  const vid = videos && videos.find((product) => product.id === id);
 
   const navigate = useNavigate();
   useEffect(() => {
@@ -54,7 +57,7 @@ export default function Explore() {
     removeFromLikes(id);
     console.log(item);
   }
-
+  console.log("CHecking form Explorer", isUser);
   // console.log("this is history list", historyList);
   // console.log("this is Watch list", watchList);
   // console.log("this is Like list", likeList);
@@ -66,17 +69,21 @@ export default function Explore() {
       <div className="explore-cont">
         <div className="video-container">
           <div className="video-player">
-            <ReactPlayer
-              className="react-player"
-              url={`https://www.youtube.com/watch?v=${id}`}
-              loop={false}
-              muted={true}
-              controls={true}
-              playing={false}
-              width="100%"
-              pip={false}
-              height="100%"
-            />
+            {isUser ? (
+              <ReactPlayer
+                className="react-player"
+                url={`https://www.youtube.com/watch?v=${id}`}
+                loop={false}
+                muted={true}
+                controls={true}
+                playing={false}
+                width="100%"
+                pip={false}
+                height="100%"
+              />
+            ) : (
+              <h1>Please Login</h1>
+            )}
           </div>
           <div className="video-info">
             <div className="vid-title">
@@ -95,7 +102,7 @@ export default function Explore() {
                 <div className="unlikebtn" onClick={(e) => removedFrmLikes(id)}>
                   <AiFillDislike />
                 </div>
-                <div className="shareBtn">
+                <div className="shareBtn" onClick={(e) => addToWatchLater(id)}>
                   <FaShare />
                 </div>
                 <div
@@ -127,15 +134,16 @@ export default function Explore() {
             <h3>Video Suggestion</h3>
           </div>
           {filterItem &&
-            filterItem.map((video) => (
+            filterItem.map((video, key) => (
               <div
                 className="video-sugg-item"
-                onClick={(e) => clickHandler(video._id)}
+                key={key}
+                onClick={(e) => clickHandler(video.id)}
               >
                 <div className="video-sugg-vid">
                   <ReactPlayer
                     className="react-player"
-                    url={`https://www.youtube.com/watch?v=${video._id}`}
+                    url={`https://www.youtube.com/watch?v=${video.id}`}
                     loop={false}
                     muted={true}
                     light={true}

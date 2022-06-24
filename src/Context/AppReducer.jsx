@@ -1,6 +1,8 @@
 export default function AppReducer(state, action) {
-  console.log("Im reducer",action.type,action.payload)
+  console.log("Im reducer", action.type, action.payload);
   switch (action.type) {
+    case "INITIAL_VIDEOS":
+      return { ...state, videos: action.payload };
     case "ADD_TO_LIKELIST":
       return { ...state, likeList: [...state.likeList, action.payload] };
     case "ADD_TO_HISTORYLIST":

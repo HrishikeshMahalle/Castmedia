@@ -1,6 +1,8 @@
+// import { videos } from "../../backend/db/videos";
+import { GlobalContext } from "../../Context/GlobalState";
 import React, { useState, useEffect } from "react";
-
 import { Sectionbar } from "../../Utilities/SectionBar/sectionbar";
+
 import { videos } from "../../backend/db/videos";
 import "./styles/center.css";
 

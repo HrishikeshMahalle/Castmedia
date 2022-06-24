@@ -1,17 +1,22 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Sectionbar } from "../../Utilities/SectionBar/sectionbar";
-import { videos } from "../../backend/db/videos";
+import { videos as Videox } from "../../backend/db/videos";
 import "./styles/bottom.css";
+import { GlobalContext } from "../../Context/GlobalState";
 
 export const Bottom = () => {
   const [music, setMusic] = useState([]);
   const [tech, setTech] = useState([]);
+  const {videos} = useContext(GlobalContext)
 
   useEffect(() => {
-    setMusic([...videos.filter((videos) => videos.category === "Music")]);
-    setTech([...videos.filter((videos) => videos.category === "Tech")]);
+    setMusic([...Videox.filter((videos) => videos.category === "Music")]);
+    setTech([...videos[0].filter((videos) => videos.category === "Tech")]);
     console.log("Rendered in Center");
   }, []);
+
+  console.log("asli",videos[0])
+  console.log("Non Use Effect",Videox)
   return (
     <div className="bottom">
       <div className="head-cont-bot">

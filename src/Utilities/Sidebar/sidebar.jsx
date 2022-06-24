@@ -11,11 +11,11 @@ export default function Sidebar() {
       textAlign: "center",
       padding: "0.5rem",
       backgroundColor: "white",
-      color: isActive ? "red" : ""
+      color: isActive ? "red" : "",
     };
   };
   return (
-    <div className="sidebar">
+    <nav className="sidebar">
       <NavLink style={sidebarItem} to="/">
         <BiHomeAlt />
       </NavLink>
@@ -23,6 +23,6 @@ export default function Sidebar() {
       <NavLink style={sidebarItem} to="/profile">
         <CgProfile />
       </NavLink>
-    </div>
+    </nav>
   );
 }
