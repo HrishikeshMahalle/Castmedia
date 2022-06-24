@@ -11,7 +11,7 @@ export default function Sidebar() {
       textAlign: "center",
       padding: "0.5rem",
       backgroundColor: "white",
-      color: isActive ? "red" : ""
+      color: isActive ? "red" : "",
     };
   };
   return (
@@ -24,5 +24,5 @@ export default function Sidebar() {
         <CgProfile />
       </NavLink>
     </nav>
-  ); 
+  );
 }

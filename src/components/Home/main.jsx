@@ -18,6 +18,20 @@ export default function Main() {
     unmute ? setUnmute(false) : setUnmute(true);
   };
 
+  // useEffect(() => {
+  //   setTrend([
+  //     ...videos.filter((videos) => videos.subCategory.includes("trending")),
+  //   ]);
+  //   console.log("Wow useEffect rendered");
+  // }, []);
+
+  // useEffect(()=>{
+  //   (async ()=>{
+  //    const data = await axios.get('/api/videos')
+  //    setVideos([...data.data.videos])
+  //   })()
+  // },[])
+
   return (
     <div className="main">
       <div className="head-container">

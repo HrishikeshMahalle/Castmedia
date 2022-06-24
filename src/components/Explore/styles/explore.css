@@ -1,0 +1,134 @@
+.explore-cont{
+    background-image: linear-gradient(180deg,purple, black);
+    color: white;
+    height: 93vh;
+    width: 95vw;
+    margin-left: auto;
+    
+    position: relative;
+    left: 0.5rem;
+    top: 2.9rem;
+
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+.video-container{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 100%;
+    
+}
+
+.video-player{
+    height: 80%;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+.video-info{
+    height: 20%;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-around;
+    gap: 0.5rem;
+    padding: 0.5rem;
+}
+.vid-title{
+    font-size: 1.5rem;
+}
+.vid-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.vid-views{
+    display: flex;
+    gap: 1rem;
+}
+.vid-btns{
+    margin-left: auto;
+    display: flex;
+    gap: 1rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+.likebtn, .unlikebtn, .addPlaylistBtn{
+    cursor: pointer;
+}
+
+.vid-desc{
+    display: flex;
+    align-items: center;
+    height: 50%;
+    border-top: 1px solid white;
+}
+.vid-channel-box{
+    display: flex;
+    height: 100%;
+    gap: 0.5rem;
+}
+.vid-channel-logo{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.vid-channel-logo img{
+    border-radius: 50%;
+    width: 60%;
+    border: 1px solid black;
+    aspect-ratio: 2/2;
+}
+.vid-channel-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.vid-channel-name span{
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.vid-subscribe-box{
+    margin-left: auto;
+}
+
+.video-sugg{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+.video-sugg-item{
+    width: 99%;
+    scroll-snap-align: start;
+    min-height:8rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow-x: hidden;
+    cursor: pointer;
+}
+.video-sugg-vid{
+    width: 40%;
+    height: 90%;
+    
+}
+.video-sug-des{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+
+}
+.des-title span{  
+    font-size: 1rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+

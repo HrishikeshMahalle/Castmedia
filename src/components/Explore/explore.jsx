@@ -25,7 +25,7 @@ export default function Explore() {
     setPlayModalOpen,
     playModalOpen,
     removeFromLikes,
-    addToWatchLater
+    addToWatchLater,
   } = useContext(GlobalContext);
   const { id } = useParams();
   const [item, setItem] = useState({});
@@ -134,7 +134,7 @@ export default function Explore() {
             <h3>Video Suggestion</h3>
           </div>
           {filterItem &&
-            filterItem.map((video,key) => (
+            filterItem.map((video, key) => (
               <div
                 className="video-sugg-item"
                 key={key}

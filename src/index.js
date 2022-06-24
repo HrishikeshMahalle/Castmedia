@@ -7,7 +7,7 @@ import App from "./App";
 import { makeServer } from "./server";
 import { AuthProvider } from "./Context/authcontext";
 // Call make Server
-makeServer();
+ makeServer(); 
 
 const container = document.getElementById("root");
 const root = createRoot(container);

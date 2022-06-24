@@ -1,0 +1,26 @@
+.modalbox {
+  height: 10rem;
+  width: auto;
+  background-color: black;
+  color: yellow;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.playlist-item {
+  height: 20%;
+  width: 90%;
+  background-color: red;
+  border: 1px solid white;
+}
+
+.create-playlists{
+    height: 20%;
+    width: 80%;
+    background-color: red;
+    border: 1px solid white;
+}
