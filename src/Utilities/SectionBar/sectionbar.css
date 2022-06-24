@@ -1,0 +1,78 @@
+
+.video-cont{
+    position: relative;
+    border: solid;
+    height: 18rem;
+    width: 90%;
+    border-radius: 0.5rem;
+    z-index: 0; 
+}
+.video-cont .video-cont-bg{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    filter: brightness(0.4);
+    border-radius: 0.5rem;
+    z-index: 0;
+}
+.video-items{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow-x: scroll;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    z-index: 1;
+    scroll-snap-type: x mandatory;
+}
+::-webkit-scrollbar {
+    width: 10px;
+    height: 5px;
+}
+  
+::-webkit-scrollbar-track {
+background: #f1f1f1;
+border-radius: 0.5rem;
+font-size: 0.5rem;
+height: 5px;
+}
+  
+::-webkit-scrollbar-thumb {
+background: #888;
+border-radius: 0.5rem;
+
+}
+::-webkit-scrollbar-thumb:hover {
+background: rgb(0, 175, 126);
+}
+
+.video-item{
+    height: 70%;
+    min-width: 23rem;
+    border: solid;
+    scroll-snap-align: start;
+}
+.video-item.head{
+    border: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.video-item.head h3{
+    margin: 0;
+    font-size: 2rem;
+    padding-left: 1rem;
+    
+}
+
+.video-item.head span {
+    font-size: 1.2rem;
+    padding-left: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
