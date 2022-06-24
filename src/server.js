@@ -61,6 +61,7 @@ export function makeServer({ environment = "development" } = {}) {
       videos.forEach((item) => {
         server.create("video", { ...item });
       });
+      console.log("server running");
       categories.forEach((item) => server.create("category", { ...item }));
       users.forEach((item) =>
         server.create("user", {
@@ -131,6 +132,9 @@ export function makeServer({ environment = "development" } = {}) {
         removeVideoFromHistoryHandler.bind(this)
       );
       this.delete("/user/history/all", clearHistoryHandler.bind(this));
+      const url = "https://noembed.com/**";
+      this.passthrough(url);
+      // this.passthrough("/api/user/**");
     },
   });
 }

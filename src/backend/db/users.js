@@ -10,9 +10,10 @@ export const users = [
   {
     _id: uuid(),
     firstName: "Adarsh",
-    lastName: "Balika",
     email: "adarshbalika@gmail.com",
     password: "adarshBalika123",
+    // liked:[],
+    // history:[],
     createdAt: formatDate(),
     updatedAt: formatDate(),
   },
